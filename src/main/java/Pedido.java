@@ -2,9 +2,9 @@ import java.util.Observable;
 import java.util.Observer;
 
 public class Pedido implements Observer {
-    int codigo;
-    String produto;
-    String statusPedido;
+    private int codigo;
+    private String produto;
+    private String statusPedido;
 
     public Pedido(int codigo ,String produto) {
         this.codigo = codigo;
@@ -14,7 +14,6 @@ public class Pedido implements Observer {
     public String getStatusPedido() {
         return statusPedido;
     }
-
 
     public void adicionarStatus(StatusPedido statusPedido) {
         statusPedido.addObserver(this);
